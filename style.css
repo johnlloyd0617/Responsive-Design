@@ -1,0 +1,309 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F7FB;
+    color: #1F2937;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #4F46E5;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-section {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 35px;
+}
+
+.form-section h2 {
+    color: #3730A3;
+    margin-bottom: 20px;
+}
+
+
+/* Flexbox */
+
+#studentForm {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+
+.input-group {
+    flex: 1;
+    min-width: 220px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #4F46E5;
+}
+
+
+/* Add Student Button */
+
+.add-btn {
+    background-color: #4F46E5;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #3730A3;
+}
+
+
+/* =========================
+   STUDENT LIST
+========================= */
+
+.students-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #3730A3;
+}
+
+#studentCount {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   STUDENT GRID
+========================= */
+
+/*
+   Desktop:
+   5 cards per row
+*/
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.student-card {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border-radius: 15px;
+    border-top: 4px solid #4F46E5;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Student Letter */
+
+.student-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.student-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.student-card p {
+    color: #6B7280;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+
+.remove-btn {
+    width: 100%;
+    padding: 9px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #FEE2E2;
+    color: #EF4444;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #EF4444;
+    color: white;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    background-color: white;
+    padding: 50px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+    color: #6B7280;
+}
+
+
+/* =========================
+   TABLET
+   3 CARDS PER ROW
+========================= */
+
+@media (max-width: 1100px) {
+
+    .student-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   1 CARD PER ROW
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    #studentForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}

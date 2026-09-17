@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Student Directory</h1>
+        <p>Add and manage student information easily.</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Student Form -->
+        <section class="form-section">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="studentProgram">Program</label>
+
+                    <input
+                        type="text"
+                        id="studentProgram"
+                        placeholder="Enter program"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit" class="add-btn">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Student Display Area -->
+        <section class="students-section">
+
+            <div class="section-header">
+
+                <h2>Student List</h2>
+
+                <span id="studentCount">
+                    0 Students
+                </span>
+
+            </div>
+
+
+            <!-- JavaScript will put student cards here -->
+            <div id="studentContainer" class="student-grid">
+
+                <div class="empty-message" id="emptyMessage">
+                    No students added yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
